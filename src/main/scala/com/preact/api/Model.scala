@@ -61,13 +61,13 @@ object ActionEvent {
 case class EventsBulkV1(data: Seq[ActionEvent])
 
 object EventsBulkV1 {
-  implicit val format: Format[EventsBulkV1] = Json.format[EventsBulkV1]
+  implicit val bulkV1Format: Format[EventsBulkV1] = Json.format[EventsBulkV1]
 }
 
 case class EventsBulkV2(person: Person, events: Seq[Event])
 
 object EventsBulkV2 {
-  implicit val actionEventBulkFormat = Json.format[EventsBulkV2]
+  implicit val bulkV2Format = Json.format[EventsBulkV2]
 }
 
 

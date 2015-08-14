@@ -1,5 +1,5 @@
-organization := "com.com.preact"
-name := "com.preact-scala"
+organization := "com.preact"
+name := "preact-scala"
 version := "1.0-SNAPSHOT"
 
 scalaVersion := "2.11.7"

@@ -1,4 +1,4 @@
-# com.preact-scala
+# preact-scala
 
 Simple Preact API client using 
 - dispatch on top of AsyncHttpClient 
@@ -7,4 +7,4 @@ Simple Preact API client using
 
 - play-json for its convenient implicit Format[T]
 
-It provides mappings for the most common data structures that can be pushed to com.preact and an example
+It provides mappings for the most common data structures that can be pushed to preact and an example
