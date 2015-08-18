@@ -42,6 +42,7 @@ case class Event(name: String,
                  timestamp: Option[Long] = None,
                  revenue: Option[Int] = None,
                  note: Option[String] = None,
+                 campaign: Option[String] = None,
                  target_id: Option[String] = None,
                  extras: Option[Map[String, String]] = None)
 
