@@ -18,7 +18,7 @@ object ExampleVBulk2 extends App {
 
   val person = Person("myEmail1@whatever.com")
   val source = Source("Silverpop")
-  val events = List(Event("Open","open"), Event("Sent","sent"))
+  val events = List(Event("Open",EventTypes.open), Event("Sent",EventTypes.sent))
 
 
 

@@ -19,7 +19,7 @@ object ExampleV2 extends App {
   val person = Person("myEmail@whatever.com")
   val source = Source("Silverpop")
 
-  val eventsData = List(Event("Open","open"), Event("Sent","sent"))
+  val eventsData = List(Event("Open",EventTypes.open), Event("Sent",EventTypes.sent))
 
   val eventPushTasks: List[Future[Try[String]]] =
     for (event <- eventsData)
