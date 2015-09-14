@@ -1,5 +1,6 @@
 package com.preact.api.model
 
+import com.preact.api.model.EventTypes.EventTypes
 import play.api.libs.json.Json
 
   case class Person(email: String,
@@ -12,7 +13,7 @@ import play.api.libs.json.Json
   }
 
   case class Event(name: String,
-                   `type`: String,
+                   `type`: EventTypes,
                    timestamp: Option[Long] = None,
                    experiment_name: Option[String] = None,
                    experiment_id: Option[String] = None,
