@@ -1,4 +1,4 @@
-package com.preact.api.model
+package com.preact.api
 
 import play.api.libs.json._
 

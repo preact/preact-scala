@@ -1,7 +1,8 @@
 package com.preact
 
 import com.preact.api._
-import com.preact.api.model.{Event, Person, _}
+import com.preact.api.model.v2.{EventsBulkV3, EventRecord, Source}
+import com.preact.api.model.{v2, Event}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
@@ -16,9 +17,9 @@ object ExampleVBulk2 extends App {
 
   val preactClient = new PreactAPIClient(dispatch.Http, code, secret, endpoint)
 
-  val person = Person("myEmail1@whatever.com")
+  val person = v2.Person("myEmail1@whatever.com")
   val source = Source("Silverpop")
-  val events = List(Event("Open",EventTypes.open), Event("Sent",EventTypes.sent))
+  val events = List(v2.Event("Open",EventTypes.open), v2.Event("Sent",EventTypes.sent))
 
 
 

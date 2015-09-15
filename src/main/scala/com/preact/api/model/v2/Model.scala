@@ -1,6 +1,7 @@
-package com.preact.api.model
+package com.preact.api.model.v2
 
-import com.preact.api.model.EventTypes.EventTypes
+import com.preact.api.EventTypes
+import EventTypes.EventTypes
 import play.api.libs.json.Json
 
   case class Person(email: String,

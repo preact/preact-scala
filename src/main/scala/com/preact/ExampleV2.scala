@@ -1,7 +1,7 @@
 package com.preact
 
-import com.preact.api._
-import com.preact.api.model.{Event, Person, _}
+import com.preact.api.{EventTypes, PreactAPIClient}
+import com.preact.api.model.v2._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._

@@ -1,4 +1,4 @@
-package com.preact.api
+package com.preact.api.model.v1
 
 import java.time.LocalDateTime
 
