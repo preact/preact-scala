@@ -11,7 +11,7 @@ case class Person(email: String,
                   properties: Map[String, String] = Map())
 
 object Person {
-  implicit val personFormat = Json.format[v2.Person]
+  implicit val personFormat = Json.format[Person]
 }
 
 case class Account(id: String,
@@ -22,16 +22,16 @@ object Account {
 }
 
 case class Event(name: EventTypes,
-                 timestamp: Option[Long] = None,
+                 timestamp: Long,
                 //use PreactEventExtras
                  extras: Map[String, String] = Map())
 
 object Event {
-  implicit val eventFormat = Json.format[v2.Event]
+  implicit val eventFormat = Json.format[Event]
 }
 
-case class ActionEvent(person: v2.Person,
-                       event: v2.Event,
+case class ActionEvent(person: Person,
+                       event: Event,
                        account: Account)
 
 object ActionEvent {
