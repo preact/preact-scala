@@ -14,8 +14,7 @@ object Person {
   implicit val personFormat = Json.format[Person]
 }
 
-case class Account(id: String,
-                   properties: Map[String, String] = Map())
+case class Account(id: String, name: String)
 
 object Account {
   implicit val accountFormat = Json.format[Account]
