@@ -13,10 +13,15 @@ import scala.util.{Failure, Success, Try}
 
 
 class PreactAPIClient(client: dispatch.Http, projectCode: String, secret: String, apiUrl: String) {
-  private[this] implicit val ctx: ExecutionContext = ExecutionContext.fromExecutor(new SingleThreadedExecutor)
+  private[this] val executor: SingleThreadedExecutor = new SingleThreadedExecutor
+  private[this] implicit val ctx: ExecutionContext = ExecutionContext.fromExecutor(executor)
   private lazy val logger  = LoggerFactory.getLogger(getClass)
   private def buildSecret = {
     Base64.getEncoder.encodeToString(s"$projectCode:$secret".getBytes)
+  }
+
+  def closeContext() = {
+    executor.shutdown()
   }
 
   def push[IN](in: IN, retries: Int = 3)(implicit fmtIn: Format[IN]): Future[Try[String]] = {
